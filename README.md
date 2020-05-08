@@ -6,6 +6,8 @@
 
 #### Professor Gustavo de Miranda
 
+![Logo](https://github.com/felipementel/MITArqCacheRedis/blob/master/docs/logoProjeto.png)
+
 API para demonstração da utilização de cache com Redis
 
 ## Stack da solução
