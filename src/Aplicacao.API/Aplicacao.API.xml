@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aplicacao.API</name>
+    </assembly>
+    <members>
+        <member name="M:Aplicacao.API.Controllers.PingsController.Get">
+            <summary>
+            Action para testes de disponibilidade. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aplicacao.API.Settings.SwaggerSettings.SwaggerConfigs.UseConfigureSwaggerMITArq(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configura o Swagger
+            </summary>
+            <param name="app">Aplicação</param>
+        </member>
+    </members>
+</doc>
