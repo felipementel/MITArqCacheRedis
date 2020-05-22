@@ -38,6 +38,7 @@ namespace Aplicacao.Infra.DataAccess.Repositories.SQL
         {
             var clienteTemp = this.Select(id);
             _context.Set<Cliente>().Remove(clienteTemp);
+
         }
 
         public void SaveChanges()

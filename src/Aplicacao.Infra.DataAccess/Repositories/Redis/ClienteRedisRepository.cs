@@ -48,11 +48,6 @@ namespace Aplicacao.Infra.DataAccess.Repositories.Redis
             if (!string.IsNullOrEmpty(cliente))
             {
                 return ConverterSimpleJson<Cliente>.CriarJson(cliente);
-                //return JsonSerializer.Deserialize<Cliente>(cliente,
-                //    new JsonSerializerOptions
-                //    {
-                //        WriteIndented = true
-                //    });
             }
             else
             {

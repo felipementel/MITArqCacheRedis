@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Caching.Distributed;
-using Aplicacao.Domain.Interfaces.Repositories;
+﻿using Aplicacao.Domain.Interfaces.Repositories;
 using Aplicacao.Domain.Interfaces.Services;
 using Aplicacao.Domain.Model;
 using System.Collections.Generic;
@@ -68,11 +67,15 @@ namespace Aplicacao.Domain.Services
         {
             _clienteSQLServerRepository.Delete(id);
             _clienteRedisRepository.Remove(id);
+
+            _clienteSQLServerRepository.SaveChanges();
         }
 
         public void Update(Cliente cliente)
         {
             _clienteSQLServerRepository.Update(cliente);
+
+            _clienteSQLServerRepository.SaveChanges();
 
             JsonSerializer.Serialize<Cliente>(cliente,
                    new JsonSerializerOptions

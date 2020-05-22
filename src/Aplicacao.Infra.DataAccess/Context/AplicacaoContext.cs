@@ -18,8 +18,10 @@ namespace Aplicacao.Infra.DataAccess.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Map
             modelBuilder.ApplyConfiguration(new ClienteMap());
 
+            //Seed
             modelBuilder.ApplyConfiguration(new ClienteSeed());
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
