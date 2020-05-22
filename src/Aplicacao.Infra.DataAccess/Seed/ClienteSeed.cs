@@ -5,7 +5,7 @@ using System;
 
 namespace Aplicacao.Infra.DataAccess.Seed
 {
-    public class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
+    public class ClienteSeed : IEntityTypeConfiguration<Cliente>
     {
         public void Configure(EntityTypeBuilder<Cliente> builder)
         {

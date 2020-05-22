@@ -1,9 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Aplicacao.Domain.Model;
+﻿using Aplicacao.Domain.Model;
 using Aplicacao.Infra.DataAccess.Map;
 using Aplicacao.Infra.DataAccess.Seed;
-using System.IO;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Aplicacao.Infra.DataAccess.Context
@@ -22,7 +20,7 @@ namespace Aplicacao.Infra.DataAccess.Context
         {
             modelBuilder.ApplyConfiguration(new ClienteMap());
 
-            modelBuilder.ApplyConfiguration(new ClienteConfiguration());
+            modelBuilder.ApplyConfiguration(new ClienteSeed());
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {

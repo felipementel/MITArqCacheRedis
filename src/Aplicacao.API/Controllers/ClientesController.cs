@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Aplicacao.Application.Interfaces;
+using Aplicacao.Application.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Aplicacao.Application.Interfaces;
-using Aplicacao.Application.ViewModel;
-using Aplicacao.Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -37,10 +35,10 @@ namespace Aplicacao.API.Controllers
         [HttpGet(Name = nameof(GetAll))]
         [MapToApiVersion("1")]
         [Consumes(MediaTypeNames.Application.Json)]
-        [ProducesResponseType(typeof(IEnumerable<Cliente>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<ClienteViewModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
-        public ActionResult<IEnumerable<Cliente>> GetAll()
+        public ActionResult<IEnumerable<ClienteViewModel>> GetAll()
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
@@ -65,7 +63,7 @@ namespace Aplicacao.API.Controllers
         [HttpGet("{id}", Name = nameof(Get))]
         [MapToApiVersion("1")]
         [Consumes(MediaTypeNames.Application.Json)]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ClienteViewModel), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
