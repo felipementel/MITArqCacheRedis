@@ -22,18 +22,21 @@ namespace Aplicacao.Infra.DataAccess.Map
                 .Property(n => n.Nome)
                 .HasColumnName("nm_nome")
                 .HasMaxLength(300)
+                .HasColumnType<string>("varchar(300)")
                 .IsRequired();
 
             builder
                 .Property(n => n.Cadastro)
                 .HasColumnName("dt_cadastro")
                 .HasDefaultValue(DateTime.Now)
+                .HasColumnType<DateTime>("datetime")
                 .IsRequired();
 
             builder
                 .Property(n => n.OrientacaoSexual)
                 .HasColumnName("nm_sexo")
                 .HasMaxLength(100)
+                .HasColumnType<Sexo>("varchar(100)")
                 .IsRequired()
                 .HasConversion(
                 s => s.ToString(),

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <ApplicationInsightsResourceId>/subscriptions/9694ce79-df16-4fb0-b5a9-872ddd8757f5/resourcegroups/rg-cliente/providers/microsoft.insights/components/Aplicacao.API</ApplicationInsightsResourceId>
-    <UserSecretsId>997adc25-735c-429e-8d93-31ad6aa59371</UserSecretsId>
+    <UserSecretsId>98820f63-a9cb-431a-ae45-cb5bf9d2737f</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
