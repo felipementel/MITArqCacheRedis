@@ -87,7 +87,6 @@ namespace Aplicacao.API
 
 
             services.AddDbContext<DbContext, AplicacaoContext>(opt => opt
-
                 .UseSqlServer(Configuration.GetConnectionString("Aplicacao"), x => x.EnableRetryOnFailure())
                 .EnableSensitiveDataLogging(Environment.IsDevelopment())
                 .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
