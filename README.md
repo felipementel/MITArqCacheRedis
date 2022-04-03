@@ -18,7 +18,8 @@ API para demonstração da utilização de cache com Redis
 
   `
   docker pull redis
-   docker run --name redisExemplo -p 6379:6379 redis
+  
+  docker run --name redisExemplo -p 6379:6379 redis
   `
 
   + Configurar a string de conexao no arquivo application.json
